@@ -52,46 +52,50 @@
 
 .alta{
 	border:1px solid #1b5003; 
-	border-radius: 5px;
-	padding:5px; 
+	border-radius: 3px;
+	padding-left:5px; 
+	padding-right:5px;
 	background-color: #f6fff2;
 	color: #1b5003;
-	width: 26px;
+	width: 70px;
 	text-align: center;
 	
 }
 
 .media{
 	border:1px solid #e8a715; 
-	border-radius: 5px;
-	padding:5px; 
+	border-radius: 3px;
+	padding-left:5px; 
+	padding-right:5px;
 	background-color: #fff4c6;
 	color: #e8a715;
-	width: 26px;
+	width: 70px;
 	text-align: center;
 }
 
 .baixa{
 	border:1px solid #921212; 
-	border-radius: 5px;
-	padding:5px; 
+	border-radius: 3px;
+	padding-left:5px; 
+	padding-right:5px;
 	background-color: #f1e0e0;
 	color: #921212;
-	width: 26px;
+	width: 70px;
 	text-align: center;
 }
 
 .descarte{
 	border:1px solid #949494; 
-	border-radius: 5px;
-	padding:5px; 
+	border-radius: 3px;
+	padding-left:5px; 
+	padding-right:5px;
 	background-color: #e6e6e6;
 	color: #949494;
-	width: 26px;
+	width: 70px;
 	text-align: center;	
 }
 
 
 .linha_descartada{
-	background-color: #efecec;
+	background-color: #f5f5f5;
 }
