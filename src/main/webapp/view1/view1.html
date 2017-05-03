@@ -24,5 +24,28 @@
 				</div>
 			</div>
 		</div>
+
+		<div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Frase</th>
+						<th>Tipo</th>
+						<th>Pontuacao</th>
+						<th>Confiança</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in funcoes">
+						<td>{{ x.nome }}</td>
+						<td>{{ x.tipo }}</td>
+						<td>{{ x.pontuacao }}</td>
+						<td>{{ x.confianca }}</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
 	</form>
 </div>

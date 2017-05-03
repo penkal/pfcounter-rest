@@ -14,7 +14,9 @@ import org.apache.commons.io.IOUtils;
 import org.jboss.resteasy.plugins.providers.multipart.InputPart;
 import org.jboss.resteasy.plugins.providers.multipart.MultipartFormDataInput;
 
+import app.DocumentReader;
 import model.FuncaoTransacional;
+import model.TipoTransacao;
 
 @Path("/fileupload") // Your Path or URL to call this service
 public class FileUploadRest {
@@ -29,8 +31,17 @@ public class FileUploadRest {
 			InputStream inputStream = inputPart.getBody(InputStream.class, null);
 			byte[] bytes = IOUtils.toByteArray(inputStream);
 			String arquivo = new String(bytes, "UTF-8");
+			//DESCOMENTAR ABAIXO
+//			return new DocumentReader().parseFile(arquivo);
 		}
-
-		return new ArrayList<>();
+		List<FuncaoTransacional> funcoes = new ArrayList<FuncaoTransacional>();
+		funcoes.add(new FuncaoTransacional("Manter Usuário",
+				TipoTransacao.CRUD, 0.8777D));
+		funcoes.add(new FuncaoTransacional("Incluir Tipo de Alguma Coisa",
+				TipoTransacao.EE, 0.6277D));
+		funcoes.add(new FuncaoTransacional("Consultar algo de interassante",
+				TipoTransacao.SE, 0.4777D));
+		return funcoes;
+//		return new ArrayList<>();
 	}
 }
