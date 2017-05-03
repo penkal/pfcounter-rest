@@ -26,16 +26,16 @@
 		</div>
 
 		<div>
-			<table class="table">
+			<table class="table scroll">
 				<thead>
 					<tr>
-						<th>Frase</th>
-						<th colspan="2">Tipo</th>
-						<th>Pontuação</th>
+						<th width="70%">Frase</th>
+						<th width="20%" colspan="2">Tipo</th>
+						<th width="10%">Pontuação</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="x in funcoes">
+					<tr ng-repeat="x in funcoes" ng-class="{linha_descartada : x.tipo=='DESCARTE'}">
 						<td>{{ x.nome }}</td>
 						<td width="30" title="{{getPercentualConfianca(x)}}"><span class="fa {{getEstilo(x)}} {{getClasse(x)}}"/></td>
 						<td>
@@ -57,7 +57,7 @@
 					</tr>
 				</tfoot>
 			</table>
-
+			<button class="btn" ng-click="uploadPic(picFile)">Corrigir Classificações</button>
 		</div>
 
 	</form>

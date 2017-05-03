@@ -32,7 +32,7 @@ public class FileUploadRest {
 			byte[] bytes = IOUtils.toByteArray(inputStream);
 			String arquivo = new String(bytes, "UTF-8");
 			//DESCOMENTAR ABAIXO
-//			return new DocumentReader().parseFile(arquivo);
+			//return new DocumentReader().parseFile(arquivo);
 		}
 		List<FuncaoTransacional> funcoes = new ArrayList<FuncaoTransacional>();
 		funcoes.add(new FuncaoTransacional("Manter Usuário",
@@ -43,6 +43,46 @@ public class FileUploadRest {
 				TipoTransacao.SE, 0.4277D));
 		funcoes.add(new FuncaoTransacional("Inutil",
 				TipoTransacao.DESCARTE, 0.1255D));
+		funcoes.add(new FuncaoTransacional("Manter Usuário",
+				TipoTransacao.CRUD, 0.8777D));
+		funcoes.add(new FuncaoTransacional("Incluir Tipo de Alguma Coisa",
+				TipoTransacao.EE, 0.6277D));
+		funcoes.add(new FuncaoTransacional("Consultar algo de interassante",
+				TipoTransacao.SE, 0.4277D));
+		funcoes.add(new FuncaoTransacional("Inutil",
+				TipoTransacao.DESCARTE, 0.1255D));
+		funcoes.add(new FuncaoTransacional("Manter Usuário",
+				TipoTransacao.CRUD, 0.8777D));
+		funcoes.add(new FuncaoTransacional("Incluir Tipo de Alguma Coisa",
+				TipoTransacao.EE, 0.6277D));
+		funcoes.add(new FuncaoTransacional("Consultar algo de interassante",
+				TipoTransacao.SE, 0.4277D));
+		funcoes.add(new FuncaoTransacional("Inutil",
+				TipoTransacao.DESCARTE, 0.1255D));
+		funcoes.add(new FuncaoTransacional("Manter Usuário",
+				TipoTransacao.CRUD, 0.8777D));
+		funcoes.add(new FuncaoTransacional("Incluir Tipo de Alguma Coisa",
+				TipoTransacao.EE, 0.6277D));
+		funcoes.add(new FuncaoTransacional("Consultar algo de interassante",
+				TipoTransacao.SE, 0.4277D));
+		funcoes.add(new FuncaoTransacional("Inutil",
+				TipoTransacao.DESCARTE, 0.1255D));
+		funcoes.add(new FuncaoTransacional("Manter Usuário",
+				TipoTransacao.CRUD, 0.8777D));
+		funcoes.add(new FuncaoTransacional("Incluir Tipo de Alguma Coisa",
+				TipoTransacao.EE, 0.6277D));
+		funcoes.add(new FuncaoTransacional("Consultar algo de interassante",
+				TipoTransacao.SE, 0.4277D));
+		funcoes.add(new FuncaoTransacional("Inutil",
+				TipoTransacao.DESCARTE, 0.1255D));
+		funcoes.add(new FuncaoTransacional("Manter Usuário",
+				TipoTransacao.CRUD, 0.8777D));
+		funcoes.add(new FuncaoTransacional("Incluir Tipo de Alguma Coisa",
+				TipoTransacao.EE, 0.6277D));
+		funcoes.add(new FuncaoTransacional("Consultar algo de interassante",
+				TipoTransacao.SE, 0.4277D));
+		funcoes.add(new FuncaoTransacional("Inutil",
+				TipoTransacao.DESCARTE, 0.1255D));		
 		return funcoes;
 //		return new ArrayList<>();
 	}
