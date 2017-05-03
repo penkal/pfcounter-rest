@@ -1,0 +1,15 @@
+<form name="myForm">
+     <fieldset>
+       <h1><center>Conta PF<center></h1>
+       <br>
+       Selecione o DVS:
+       <input type="file" ngf-select ng-model="picFile" name="file"
+              accept="txt/*" ngf-max-size="2MB" required
+              ngf-model-invalid="errorFile">
+       <br>
+       <button class="btn btn-primary" ng-disabled="!myForm.$valid"
+               ng-click="uploadPic(picFile)">Enviar</button>
+
+     </fieldset>
+     <br>
+   </form>
