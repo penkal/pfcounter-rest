@@ -23,3 +23,29 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+.form-control {
+	background-color: #fff;
+	border-color: #ccc;
+	border-radius: 2px;
+	box-shadow: none;
+	font-size: 14px;
+	height: 34px;
+	line-height: inherit;
+	margin-bottom: 25px;
+}
+
+.title{
+	font-size: 30px;
+	font-weight: bold;
+	color: #747272;
+	border-bottom: 1px solid #f0b50c;
+	padding: 5px;		
+}
+
+.subtitle{
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	color: #747272;
+}

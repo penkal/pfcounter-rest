@@ -1,30 +1,17 @@
-<form name="myForm">
-	<fieldset>
-		<h1>
-			<center>
-				Conta PF
-				<center>
-		</h1>
+
+<div class="panel-body" style="padding-left:80px; padding-right:80px;">
+	<form name="myForm">
+		<h1 class="title">Jarvis <span class="subtitle">Conta Ponto de Função</span></h1>
 		<br>
-		<!--        Selecione o DVS: -->
-		<!--        <input type="file" ngf-select ng-model="picFile" name="file" -->
-		<!--               accept="txt/*" ngf-max-size="2MB" required -->
-		<!--               ngf-model-invalid="errorFile"> -->
-		<!--        <br> -->
-		<!--        <button class="btn btn-primary" ng-disabled="!myForm.$valid" -->
-		<!--                ng-click="uploadPic(picFile)">Enviar</button> -->
-
-		<!--      </fieldset> -->
-		<!--      <br> -->
-
+		
 		<div class="row">
 			<div class="col-sm-10">
 				<div class="form-group">
-
-					<label class="control-label required">Selecione o DVS:</label>
+	
+					<label class="control-label required" style="color: #747272;">Documento de Visuão</label>
 					<div class="input-group">
 						<input type="text" class="form-control search" ng-model="picFile.name" name="file"
-							disabled placeholder="O arquivo deve estar no formato CSV">
+							disabled placeholder="O arquivo deve estar no formato .txt">
 						<span class="input-group-btn">
 							<button type="button" class="btn btn-default" ngf-select
 								ng-model="picFile" name="fileButton" ngf-pattern="'.txt'"
@@ -32,22 +19,10 @@
 								<span class="fa fa-search" />
 							</button>
 							<button class="btn btn-primary" ng-disabled="!myForm.$valid"
-								ng-click="uploadPic(picFile)">Enviar</button>
+								ng-click="uploadPic(picFile)">Contar</button>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<style>
-.form-control {
-	background-color: #fff;
-	border-color: #ccc;
-	border-radius: 2px;
-	box-shadow: none;
-	font-size: 14px;
-	height: 34px;
-	line-height: inherit;
-	margin-bottom: 25px;
-}
-</style>
-</form>
+	</form>
+</div>
