@@ -9,7 +9,7 @@ angular.module('myApp.view1', ['ngRoute', 'ngFileUpload'])
   });
 }])
 
-.controller('View1Ctrl', ['$scope', 'Upload', '$timeout', function ($scope, Upload, $timeout) {
+.controller('View1Ctrl', ['$scope', 'Upload', '$timeout', '$http', function ($scope, Upload, $timeout, $http) {
     $scope.uploadPic = function(file) {
     file.upload = Upload.upload({
       url: 'http://localhost:8080/pfcounter-rest/rest/fileupload',
@@ -21,12 +21,6 @@ angular.module('myApp.view1', ['ngRoute', 'ngFileUpload'])
     	  $scope.funcoes = response.data;
     	  $scope.getTotal();
       });
-    }, function (response) {
-      if (response.status > 0)
-        $scope.errorMsg = response.status + ': ' + response.data;
-    }, function (evt) {
-      // Math.min is to fix IE which reports 200% sometimes
-      file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
     });
     }
     
@@ -88,5 +82,12 @@ angular.module('myApp.view1', ['ngRoute', 'ngFileUpload'])
     	}
     	$scope.getTotal();
     }
+    
+    $scope.reclassify = function() {
+    	var reclassify = $http.post('http://localhost:8080/pfcounter-rest/rest/reclassify', $scope.funcoes)
+    	reclassify.then(function(result) {
+    		$scope.funcoes = result.data;
+    	});
+        }
     
 }]);
