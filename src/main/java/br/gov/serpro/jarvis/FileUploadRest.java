@@ -40,7 +40,9 @@ public class FileUploadRest {
 		funcoes.add(new FuncaoTransacional("Incluir Tipo de Alguma Coisa",
 				TipoTransacao.EE, 0.6277D));
 		funcoes.add(new FuncaoTransacional("Consultar algo de interassante",
-				TipoTransacao.SE, 0.4777D));
+				TipoTransacao.SE, 0.4277D));
+		funcoes.add(new FuncaoTransacional("Inutil",
+				TipoTransacao.DESCARTE, 0.1255D));
 		return funcoes;
 //		return new ArrayList<>();
 	}

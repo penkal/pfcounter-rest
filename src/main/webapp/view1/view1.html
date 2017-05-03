@@ -30,19 +30,32 @@
 				<thead>
 					<tr>
 						<th>Frase</th>
-						<th>Tipo</th>
-						<th>Pontuacao</th>
-						<th>Confiança</th>
+						<th colspan="2">Tipo</th>
+						<th>Pontuação</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr ng-repeat="x in funcoes">
 						<td>{{ x.nome }}</td>
-						<td>{{ x.tipo }}</td>
+						<td width="30" title="{{getPercentualConfianca(x)}}"><span class="fa {{getEstilo(x)}} {{getClasse(x)}}"/></td>
+						<td>
+							<select ng-model="x.tipo" id="classificacao" ng-change="atualizaValor(x)">
+							    <option value="CE">CE</option>
+							    <option value="EE">EE</option>
+							    <option value="SE">SE</option>
+							    <option value="CRUD">CRUD</option>          
+							    <option value="DESCARTE">Descartar</option>
+							</select>			
+						</td>
 						<td>{{ x.pontuacao }}</td>
-						<td>{{ x.confianca }}</td>
 					</tr>
 				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="3"><b>Total</b></td>
+						<td><b>{{ total }}</b></td> 
+					</tr>
+				</tfoot>
 			</table>
 
 		</div>
