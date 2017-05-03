@@ -18,7 +18,7 @@ angular.module('myApp.view1', ['ngRoute', 'ngFileUpload'])
 
     file.upload.then(function (response) {
       $timeout(function () {
-        file.result = response.data;
+    	  $scope.funcoes = response.data;
       });
     }, function (response) {
       if (response.status > 0)
