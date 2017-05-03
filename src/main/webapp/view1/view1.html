@@ -8,7 +8,7 @@
 			<div class="col-sm-10">
 				<div class="form-group">
 	
-					<label class="control-label required" style="color: #747272;">Documento de Visuão</label>
+					<label class="control-label required" style="color: #888; font-weight: normal;">Documento de Visão</label>
 					<div class="input-group">
 						<input type="text" class="form-control search" ng-model="picFile.name" name="file"
 							disabled placeholder="O arquivo deve estar no formato .txt">
@@ -30,14 +30,15 @@
 				<thead>
 					<tr>
 						<th width="70%">Frase</th>
-						<th width="20%" colspan="2">Tipo</th>
+						<th width="5%">Confiança</th>
+						<th width="15%">Tipo</th>
 						<th width="10%">Pontuação</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr ng-repeat="x in funcoes" ng-class="{linha_descartada : x.tipo=='DESCARTE'}">
 						<td>{{ x.nome }}</td>
-						<td width="30" title="{{getPercentualConfianca(x)}}"><span class="fa {{getEstilo(x)}} {{getClasse(x)}}"/></td>
+						<td title="Confiança: {{getPercentualConfianca(x)}}"><div class="{{getClasse(x)}}"> {{getClasse(x)}}</div></td>
 						<td>
 							<select ng-model="x.tipo" id="classificacao" ng-change="atualizaValor(x)">
 							    <option value="CE">CE</option>
@@ -57,7 +58,7 @@
 					</tr>
 				</tfoot>
 			</table>
-			<button class="btn" ng-click="reclassify()">Corrigir Classificações</button>
+			<button class="btn btn-primary" ng-click="reclassify()">Corrigir Classificações</button>
 		</div>
 
 	</form>
